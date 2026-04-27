@@ -14,24 +14,24 @@ class User(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Int? = null,
+    var id: Int? = null,
 
     @Column(name = "user_id")
-    val userId: String?,
+    var userId: String?,
 
     @Column(name = "pass_hash")
-    val passHash: String?,
+    var passHash: String?,
 
     @Column(name = "use_user")
-    val useUser: Boolean?,
+    var useUser: Boolean?,
 
     @Column(name = "cr_date")
-    val crDate: LocalDate?,
+    var crDate: LocalDate?,
 
     @Column(name = "end_date")
-    val endDate: LocalDate?,
+    var endDate: LocalDate?,
 
-    val role: String?,
+    var role: String?,
 
 
     )
