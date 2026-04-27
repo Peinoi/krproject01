@@ -1,4 +1,4 @@
-package com.kr
+package com.kr.krproject01
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
