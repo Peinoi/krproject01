@@ -7,7 +7,7 @@ export default function DashboardPage() {
             <div className={styles.container}>
                 <h2 className={styles.title}>유저 목록</h2>
                 <h3>PullRequest merge 테스트</h3>
-
+                <h3>PullRequest Rebase 테스트</h3>
                 <div className={styles.listCard}>
                     <UserList />
                 </div>
