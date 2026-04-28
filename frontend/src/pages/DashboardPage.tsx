@@ -9,6 +9,12 @@ export default function DashboardPage() {
                 <div className={styles.listCard}>
                     <UserList />
                 </div>
+                <div className={styles.listCard}>
+                    <UserList />
+                </div>
+                <div className={styles.listCard}>
+                    <UserList />
+                </div>
             </div>
         </div>
     )
