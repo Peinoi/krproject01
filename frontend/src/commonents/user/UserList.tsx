@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import type { UserResponse } from '../../types/user'
 import { getUsers } from '../../api/userApi'
 import styles from './UserList.module.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Table from 'react-bootstrap/Table';
 
 export default function UserList() {
