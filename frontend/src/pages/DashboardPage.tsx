@@ -18,6 +18,12 @@ export default function DashboardPage() {
                     <h2>차트</h2>
                     <UserList />
                 </div>
+                <div className={styles.listCard}>
+                    <UserList />
+                </div>
+                <div className={styles.listCard}>
+                    <UserList />
+                </div>
             </div>
         </div>
     )

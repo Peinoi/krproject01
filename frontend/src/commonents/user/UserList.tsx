@@ -30,6 +30,7 @@ export default function UserList() {
                 <tr>
                     <th>ID</th>
                     <th>유저 아이디</th>
+                    <th>부서명</th>
                     <th>역할</th>
                     <th>상태</th>
                     <th>가입일</th>
@@ -41,6 +42,7 @@ export default function UserList() {
                     <tr key={user.id}>
                         <td>{user.id}</td>
                         <td>{user.userId}</td>
+                        <td>{user.deptName}</td>
                         <td>
                                 <span className={`${styles.badge} ${user.role === 'ADMIN' ? styles.badgeAdmin : styles.badgeUser}`}>
                                     {user.role}
