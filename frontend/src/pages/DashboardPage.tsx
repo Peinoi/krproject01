@@ -1,5 +1,6 @@
 import UserList from '../commonents/user/UserList'
 import styles from './DashboardPage.module.css'
+import Board from "../commonents/board/board.tsx";
 
 export default function DashboardPage() {
     return (
@@ -12,18 +13,13 @@ export default function DashboardPage() {
                 </div>
                 <div className={styles.listCard}>
                     <h2>게시판</h2>
-                    <UserList />
+                    <Board/>
                 </div>
                 <div className={styles.listCard}>
                     <h2>차트</h2>
-                    <UserList />
+
                 </div>
-                <div className={styles.listCard}>
-                    <UserList />
-                </div>
-                <div className={styles.listCard}>
-                    <UserList />
-                </div>
+
             </div>
         </div>
     )
