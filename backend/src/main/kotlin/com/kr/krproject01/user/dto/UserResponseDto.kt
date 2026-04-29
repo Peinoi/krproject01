@@ -10,6 +10,7 @@ data class UserResponseDto(
     val crDate: LocalDate?,
     val endDate: LocalDate?,
     val role: String?,
+    val deptName: String?,
 ) {
     companion object {
         fun from(user: User) = UserResponseDto(
@@ -19,6 +20,7 @@ data class UserResponseDto(
             crDate = user.crDate,
             endDate = user.endDate,
             role = user.role,
+            deptName = user.dept.deptName,
         )
     }
 }

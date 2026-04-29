@@ -5,6 +5,7 @@ export interface UserResponse {
     crDate: string
     endDate: string | null
     role: string
+    deptName: string
 }
 
 export interface UserRequest {
