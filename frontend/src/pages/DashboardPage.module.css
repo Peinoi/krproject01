@@ -1,23 +1,24 @@
-.dashboard {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* 3등분 */
-    gap: 24px;
-    padding: 24px;
-    height: 100vh;
-    box-sizing: border-box;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap : 16px;
+    justify-content: center;
 }
 
 .card {
     background: #fff;
     border-radius: 12px;
     padding: 20px;
+    flex: 0 1 calc(50% - 16px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     overflow: auto;
 }
 
 .title {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: bolder;
     margin-bottom: 16px;
     color: #333;
+}
+h1,h2{
+    text-align: center;
 }
