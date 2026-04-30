@@ -21,13 +21,13 @@ class User(
     var id: Int? = null,
 
     @Column(name = "user_id")
-    var userId: String?,
+    var userId: String,
 
     @Column(name = "pass_hash")
-    var passHash: String?,
+    var passHash: String,
 
     @Column(name = "use_user")
-    var useUser: Boolean?,
+    var useUser: Boolean,
 
     @Column(name = "cr_date")
     var crDate: LocalDate?,
