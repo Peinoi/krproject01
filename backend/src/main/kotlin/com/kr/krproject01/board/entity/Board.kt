@@ -22,8 +22,8 @@ class Board(
     @Column(name = "title")
     var title: String,
 
-//    @Column(name = "content")
-//    var content: String,
+    @Column(name = "content")
+    var content: String,
 
     @Column(name = "cr_date")
     var crDate: LocalDate,

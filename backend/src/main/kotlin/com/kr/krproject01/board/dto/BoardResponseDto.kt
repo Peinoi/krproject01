@@ -10,7 +10,6 @@ data class BoardResponseDto(
     val crDate: LocalDate,
     val userId: String,
 ) {
-
     companion object {
 
         fun from(board: Board): BoardResponseDto {
@@ -23,8 +22,6 @@ data class BoardResponseDto(
             )
         }
     }
-
-
 }
 
 
