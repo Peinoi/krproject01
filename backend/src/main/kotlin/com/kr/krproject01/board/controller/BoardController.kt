@@ -17,9 +17,9 @@ class BoardController(
     fun list(
         @RequestParam(defaultValue = "1") page: Int,
         @RequestParam(defaultValue = "2") size: Int,
+        @RequestParam(required = false) keyword: String?,
     ): Page<BoardResponseDto> {
-        return boardService.findAll(page, size)
-
+        return boardService.findAll(page, size, keyword)
     }
 }
 

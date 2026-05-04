@@ -12,13 +12,12 @@ class BoardService(
     private val boardRepository: BoardRepository,
 ) {
     @Transactional(readOnly = true)
-    fun findAll(page: Int, size: Int): Page<BoardResponseDto> {
-        // PageRequest는 0-based index이므로 page - 1 처리
+    fun findAll(page: Int, size: Int, keyword: String?): Page<BoardResponseDto> {
         val pageable = PageRequest.of(page - 1, size)
 
-        val boards = boardRepository.findByBoard(pageable)
+        val boards = boardRepository.searchBoards(keyword, pageable)
 
-        // Entity를 DTO로 변환
         return boards.map { BoardResponseDto.from(it) }
     }
+    
 }
