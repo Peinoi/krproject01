@@ -15,10 +15,11 @@ export default function Board() {
 
     const [boards, setBoards] = useState<BoardResponse[]>([]);
     const [totalPages, setTotalPages] = useState(0);
-
+    const [keyword, setKeyword] = useState("");
+    const [searchInput, setSearchInput] = useState("");
     useEffect(() => {
         // API 요청
-        getBoard(currentPage, PAGE_SIZE)
+        getBoard(currentPage, PAGE_SIZE,keyword)
             .then(data => {
                 setBoards(data.content);
                 setTotalPages(data.totalPages);
@@ -27,17 +28,24 @@ export default function Board() {
 
         // 2. 페이지가 바뀔 때마다 세션 스토리지에 저장
         sessionStorage.setItem("boardPage", String(currentPage));
-    }, [currentPage]);
+    }, [currentPage, keyword]);
 
     const goToPage = (page: number) => {
         setCurrentPage(page);
     };
-
+    const handleSearch = () => {
+        setCurrentPage(1);      // 검색하면 1페이지로
+        setKeyword(searchInput); // 실제 검색 실행
+    };
     return (
         <div>
             <span>공지사항 (현재 페이지: {currentPage})</span>
             <div className="mb-2">
-                <input /> <button>검색</button>
+                <input
+                    value={searchInput}
+                    onChange={(e) => setSearchInput(e.target.value)}
+                />
+                <button onClick={handleSearch}>검색</button>
             </div>
 
             <Table striped bordered hover>
